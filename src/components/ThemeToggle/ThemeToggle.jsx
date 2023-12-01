@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaMoon } from "react-icons/fa6";
 import { IoSunny } from "react-icons/io5";
-export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(true);
+export default function ThemeToggle({ darkMode, setDarkMode }) {
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") setDarkMode(false);

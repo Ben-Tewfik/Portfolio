@@ -1,15 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { whiteLogo } from "../../../public/assets";
+import { blackLogo, whiteLogo } from "../../../public/assets";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 dark:bg-bodyDarkColor bg-white px-4">
+    <div className="w-full dark:shadow-navbarShadow shadow-lg h-20 lg:h-[12vh] sticky top-0 z-50 dark:bg-bodyDarkColor bg-bodyLightColor px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">
         <div>
-          <Image src={whiteLogo} alt="logo" className="w-14 h-auto" />
+          <Image
+            src={!darkMode ? whiteLogo : blackLogo}
+            alt="logo"
+            className={`w-14 h-auto`}
+          />
         </div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -23,7 +29,7 @@ export default function Navbar() {
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1 }}
-                className="font-medium text-textDark hover:text-[#deb992] cursor-pointer duration-300 nav-link"
+                className="dark:text-white text-bodyDarkColor font-bold hover:text-[#deb992] dark:hover:text-[#deb992] cursor-pointer duration-300 nav-link"
               >
                 Home
               </motion.li>
@@ -68,7 +74,7 @@ export default function Navbar() {
                 Contact
               </motion.li>
             </Link>
-            <ThemeToggle />
+            <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
           </ul>
         </motion.div>
         {/* icon section */}
