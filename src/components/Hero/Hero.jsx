@@ -19,7 +19,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-DarkColor text-4xl lgl:text-6xl font-titleFont font-semibold tracking-wide "
       >
-        Hi, I'm{" "}
+        Hi, I`&#39;`m{" "}
         <span className="dark:text-[#deb992] text-[#0096FB] font-bold">
           Benarba Tewfik
         </span>
@@ -39,7 +39,7 @@ export default function Hero() {
         className="text-base md:max-w-[650px] text-[#3E4756] "
       >
         I have a passion for front-end development creating visually appealing
-        and user-friendly web interfaces. Let's collaborate to bring your
+        and user-friendly web interfaces. Let`&#39;`s collaborate to bring your
         digital projects to life.
       </motion.p>
     </div>
