@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { whiteLogo } from "../../../public/assets";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 export default function Navbar() {
   return (
-    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4">
+    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 dark:bg-bodyDarkColor bg-white px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">
         <div>
           <Image src={whiteLogo} alt="logo" className="w-14 h-auto" />
@@ -22,7 +23,7 @@ export default function Navbar() {
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1 }}
-                className="font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                className="font-medium text-textDark hover:text-[#deb992] cursor-pointer duration-300 nav-link"
               >
                 Home
               </motion.li>
@@ -32,7 +33,7 @@ export default function Navbar() {
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.2 }}
-                className="font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                className="font-medium text-textDark hover:text-[#E3F0FF] cursor-pointer duration-300 nav-link"
               >
                 About
               </motion.li>
@@ -52,7 +53,7 @@ export default function Navbar() {
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.4 }}
-                className="font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                className="font-medium text-textDark hover:text-[#E3F0FF] cursor-pointer duration-300 nav-link"
               >
                 Projects
               </motion.li>
@@ -62,11 +63,12 @@ export default function Navbar() {
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.5 }}
-                className="font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                className="font-medium text-textDark hover:text-[#E3F0FF] cursor-pointer duration-300 nav-link"
               >
                 Contact
               </motion.li>
             </Link>
+            <ThemeToggle />
           </ul>
         </motion.div>
         {/* icon section */}
