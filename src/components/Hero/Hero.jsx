@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div
-      className="w-full max-w-contentContainer h-[88vh] text-center mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 items-start justify-center"
+      className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
       id="home"
     >
       <motion.h3
@@ -36,12 +36,34 @@ export default function Hero() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.9 }}
-        className="text-base md:max-w-[650px] text-textLight "
+        className="text-base md:max-w-[730px]  text-textLight "
       >
         I have a passion for front-end development creating visually appealing
         and user-friendly web interfaces. Let&#39;s collaborate to bring your
         digital projects to life.
       </motion.p>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link href="#">
+          <motion.button
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="w-52 h-14 font-titleFont border border-textBeige rounded-md text-textBeige tracking-wide hover:bg-hoverColor duration-300"
+          >
+            Hire Me
+          </motion.button>
+        </Link>
+        <Link href="#projects">
+          <motion.button
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="w-52 h-14 font-titleFont border border-textBeige rounded-md text-textBeige tracking-wide hover:bg-hoverColor duration-300"
+          >
+            Explore Projects
+          </motion.button>
+        </Link>
+      </div>
     </div>
   );
 }

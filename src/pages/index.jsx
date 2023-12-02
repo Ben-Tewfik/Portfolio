@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero/Hero";
+import LeftSide from "@/components/LeftSide/LeftSide";
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -13,7 +15,19 @@ export default function Home() {
       </Head>
       <main className="w-full h-screen font-bodyFont bg-darkColor text-white overflow-x-hidden overflow-y-scroll">
         <Navbar />
-        <Hero />
+        <div className="w-full h-[88vh] xl:flex items-center gap-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="hidden xl:inline-flex w-32 h-full"
+          >
+            <LeftSide />
+          </motion.div>
+          <div>
+            <Hero />
+          </div>
+        </div>
       </main>
     </>
   );
