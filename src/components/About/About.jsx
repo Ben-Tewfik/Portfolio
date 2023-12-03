@@ -12,8 +12,8 @@ export default function About() {
         About Me
       </h2>
       <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16">
-        <div className="w-72 mx-auto lg:w-1/2 h-96 relative group">
-          <div className="w-full h-full absolute lg:-top-6 lg:-left-6">
+        <div className="w-72 mx-auto lg:w-1/3 h-80 relative group">
+          <div className="w-full h-80 absolute lg:-top-6 lg:-left-6">
             <Image
               src={tewfik}
               alt="Tewfik Photo"
