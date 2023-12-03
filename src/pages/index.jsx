@@ -3,6 +3,7 @@ import LeftSide from "@/components/LeftSide/LeftSide";
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import About from "@/components/About/About";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
             <Hero />
           </div>
         </div>
-        <h1>hellow</h1>
+        <About />
       </main>
     </>
   );
