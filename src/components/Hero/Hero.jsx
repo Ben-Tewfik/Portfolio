@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div
-      className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
+      className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 px-5 mdl:px-10 xl:px-4"
       id="home"
     >
       <motion.h3
@@ -42,7 +42,7 @@ export default function Hero() {
         and user-friendly web interfaces. Let&#39;s collaborate to bring your
         digital projects to life.
       </motion.p>
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sml:flex-row gap-4">
         <Link href="#">
           <motion.button
             initial={{ y: 10, opacity: 0 }}

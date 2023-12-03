@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <main className="w-full h-screen font-bodyFont bg-darkColor text-white overflow-x-hidden overflow-y-scroll">
         <Navbar />
-        <div className="w-full h-[88vh] xl:flex items-center gap-20">
+        <div className="w-full h-[88vh] items-center flex gap-20">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -28,6 +28,7 @@ export default function Home() {
             <Hero />
           </div>
         </div>
+        <h1>hellow</h1>
       </main>
     </>
   );
