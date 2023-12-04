@@ -6,9 +6,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-contentContainer mx-auto px-5 py-10 lgl:py-32 flex flex-col gap-4 lg:gap-8"
+      className="max-w-contentContainer mx-auto px-5 py-10 lgl:py-32 flex flex-col gap-4 md:gap-8 lg:gap-14"
     >
-      <h2 className="font-titleFont text-2xl text-white font-semibold">
+      <h2 className="font-titleFont text-3xl text-center text-white font-semibold">
         About Me
       </h2>
       <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16">
