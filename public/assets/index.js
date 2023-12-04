@@ -14,6 +14,7 @@ import daisyui from "./images/daisyui.svg";
 import mui from "./images/mui.png";
 import framer from "./images/framer.svg";
 import jest from "./images/jest.png";
+import studentStore from "./images/studentStore.png";
 
 export {
   whiteLogo,
@@ -32,4 +33,5 @@ export {
   mui,
   framer,
   jest,
+  studentStore,
 };
