@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { whiteLogo } from "../../../public/assets";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Navbar() {
   const ref = useRef("");
+  const [showMenu, setShowMenu] = useState(false);
   function handleScroll(e) {
     e.preventDefault();
-    console.log(e);
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
@@ -35,52 +35,67 @@ export default function Navbar() {
           className="hidden mdl:inline-flex items-center gap-7"
         >
           <ul className="flex gap-7">
-            <Link href="#home" onClick={handleScroll}>
+            <Link
+              href="#home"
+              onClick={handleScroll}
+              className="text-white font-bold hover:text-[#deb992] cursor-pointer duration-300 nav-link"
+            >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1 }}
-                className="text-white font-bold hover:text-[#deb992] cursor-pointer duration-300 nav-link"
               >
                 Home
               </motion.li>
             </Link>
-            <Link href="#about" onClick={handleScroll}>
+            <Link
+              href="#about"
+              onClick={handleScroll}
+              className="text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
+            >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.2 }}
-                className="text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
               >
                 About
               </motion.li>
             </Link>
-            <Link href="#skills" onClick={handleScroll}>
+            <Link
+              href="#skills"
+              onClick={handleScroll}
+              className="text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
+            >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.3 }}
-                className="text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
               >
                 Skills
               </motion.li>
             </Link>
-            <Link href="#projects" onClick={handleScroll}>
+            <Link
+              href="#projects"
+              onClick={handleScroll}
+              className=" text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
+            >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.4 }}
-                className=" text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
               >
                 Projects
               </motion.li>
             </Link>
-            <Link href="#contact" onClick={handleScroll}>
+            <Link
+              href="#contact"
+              onClick={handleScroll}
+              className=" text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
+            >
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.5 }}
-                className=" text-white hover:text-[#deb992] font-bold cursor-pointer duration-300 nav-link"
               >
                 Contact
               </motion.li>
