@@ -13,14 +13,14 @@ export default function Projects() {
       <h2 className="font-titleFont text-3xl text-center text-white font-semibold">
         Projects
       </h2>
-      <div className="w-full flex flex-col items-center justify-between gap-28 mt-10">
+      <div className="w-full px-5 flex flex-col items-center justify-between  gap-14 md:gap-20 lg:gap-28 mt-10">
         {/* project 1 */}
-        <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
-          <div className="flex flex-col xl:flex-row gap-6">
+        <div className="w-full flex flex-col items-start justify-center gap-28 mt-10">
+          <div className="flex flex-col lg:flex-row gap-6">
             <Link
               href="https://studentsstore.vercel.app/"
               target="_blank"
-              className="w-full xl:w-1/2 h-auto relative group"
+              className="w-full md:w-[70vw] mx-auto lg:w-1/2 h-auto relative group"
             >
               <div>
                 <Image
@@ -30,7 +30,7 @@ export default function Projects() {
                 />
               </div>
             </Link>
-            <div className="w-full xl:w-1/2 flex flex-col gap-2 lgl:justify-between items-end  xl:-ml-16 z-10">
+            <div className="w-full lg:w-1/2 flex flex-col gap-2 lgl:justify-between items-start lg:items-end lg:-ml-16 z-10">
               <h3 className="text-2xl font-bold text-textBeige">
                 Student Store
               </h3>
@@ -38,7 +38,7 @@ export default function Projects() {
                 Student Store is a marketplace for students to sell, buy, or
                 borrow cheap and used products.
               </p>
-              <ul className="font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <ul className="font-titleFont tracking-wide flex gap-2 md:gap-5 lg:gap-4 flex-wrap md:justify-between text-textDark">
                 <li>Next.js</li>
                 <li>Tailwind</li>
                 <li>Firebase</li>
@@ -67,11 +67,11 @@ export default function Projects() {
         </div>
         {/* project 2 */}
         <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
-          <div className="flex flex-col xl:flex-row-reverse gap-6">
+          <div className="flex flex-col lg:flex-row-reverse gap-6">
             <Link
               href="https://so9ify.vercel.app/"
               target="_blank"
-              className="w-full xl:w-1/2 h-auto relative group"
+              className="w-full md:w-[70vw] mx-auto lg:w-1/2 h-auto relative group"
             >
               <div>
                 <Image
@@ -81,7 +81,7 @@ export default function Projects() {
                 />
               </div>
             </Link>
-            <div className="w-full xl:w-1/2 flex flex-col gap-2 lgl:justify-between items-start xl:-mr-16 z-10">
+            <div className="w-full lg:w-1/2 flex flex-col gap-2 lgl:justify-between items-start lg:-mr-16 z-10">
               <h3 className="text-2xl font-bold text-textBeige">So9ify</h3>
               <p className="bg-[#112240]  p-2 md:p-6 rounded-md">
                 So9ify is an e-commerce website project showcasing the
@@ -115,21 +115,21 @@ export default function Projects() {
         </div>
         {/* project 3 */}
         <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
-          <div className="flex flex-col xl:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
             <Link
               href="https://master--resonant-otter-299f75.netlify.app/"
               target="_blank"
-              className="w-full xl:w-1/2 h-auto relative group"
+              className="w-full md:w-[70vw] mx-auto lg:w-1/2 h-auto relative group"
             >
               <div>
                 <Image
                   src={neocine}
                   alt="Neocine Project image"
-                  className="w-full h-full object-contain rounded-md"
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
             </Link>
-            <div className="w-full xl:w-1/2 flex flex-col gap-2 lgl:justify-between items-end xl:-ml-16 z-10">
+            <div className="w-full lg:w-1/2 flex flex-col gap-2 lgl:justify-between items-start lg:items-end lg:-ml-16 z-10">
               <h3 className="text-2xl font-bold text-textBeige">Neocine</h3>
               <p className="bg-[#112240]  p-2 md:p-6 rounded-md">
                 Neocine is a user-friendly website powered by The Movie Database
