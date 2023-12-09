@@ -6,10 +6,7 @@ import { RxOpenInNewWindow } from "react-icons/rx";
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="max-w-contentContainer mx-auto lgl:px-20 py-24"
-    >
+    <section id="projects" className="max-w-contentContainer mx-auto py-24">
       <h2 className="font-titleFont text-3xl text-center text-white font-semibold">
         Projects
       </h2>
