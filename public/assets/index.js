@@ -15,6 +15,8 @@ import mui from "./images/mui.png";
 import framer from "./images/framer.svg";
 import jest from "./images/jest.png";
 import studentStore from "./images/studentStore.png";
+import so9ify from "./images/so9ify.png";
+import neocine from "./images/neocine.png";
 
 export {
   whiteLogo,
@@ -34,4 +36,6 @@ export {
   framer,
   jest,
   studentStore,
+  so9ify,
+  neocine,
 };
