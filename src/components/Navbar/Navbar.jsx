@@ -2,8 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { whiteLogo } from "../../../public/assets";
+import { useRef } from "react";
 
 export default function Navbar() {
+  const ref = useRef("");
+  function handleScroll(e) {
+    e.preventDefault();
+    console.log(e);
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+    // upadte the class name of the clicked links
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+      link.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+  }
   return (
     <div className="w-full dark:shadow-navbarShadow shadow-lg h-20 lg:h-[12vh] sticky top-0 z-50 bg-darkColor px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">
@@ -17,7 +35,7 @@ export default function Navbar() {
           className="hidden mdl:inline-flex items-center gap-7"
         >
           <ul className="flex gap-7">
-            <Link href="#home">
+            <Link href="#home" onClick={handleScroll}>
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -27,7 +45,7 @@ export default function Navbar() {
                 Home
               </motion.li>
             </Link>
-            <Link href="#home">
+            <Link href="#about" onClick={handleScroll}>
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -37,7 +55,7 @@ export default function Navbar() {
                 About
               </motion.li>
             </Link>
-            <Link href="#home">
+            <Link href="#skills" onClick={handleScroll}>
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -47,7 +65,7 @@ export default function Navbar() {
                 Skills
               </motion.li>
             </Link>
-            <Link href="#home">
+            <Link href="#projects" onClick={handleScroll}>
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -57,7 +75,7 @@ export default function Navbar() {
                 Projects
               </motion.li>
             </Link>
-            <Link href="#home">
+            <Link href="#contact" onClick={handleScroll}>
               <motion.li
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

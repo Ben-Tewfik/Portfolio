@@ -30,7 +30,10 @@ const fadeInAnimationVariants = {
 
 export default function Skills() {
   return (
-    <section className="max-w-contentContainer mx-auto px-5 py-10 lgl:py-32 flex flex-col gap-4 md:gap-8 lg:gap-14">
+    <section
+      id="skills"
+      className="max-w-contentContainer mx-auto px-5 py-10 lgl:py-32 flex flex-col gap-4 md:gap-8 lg:gap-14"
+    >
       <h1 className="font-titleFont text-3xl text-center text-white font-semibold">
         Skills
       </h1>
