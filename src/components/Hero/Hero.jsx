@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 
 import Link from "next/link";
 export default function Hero() {
+  function handleScroll(e) {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
   return (
     <div
       className="max-w-contentContainer mx-auto py-10 mdl:py-24 scroll-mt-28 flex flex-col gap-4 lgl:gap-8 px-5 mdl:px-10 xl:px-4"
@@ -43,7 +52,7 @@ export default function Hero() {
         digital projects to life.
       </motion.p>
       <div className="flex flex-col sml:flex-row gap-4">
-        <Link href="#contact">
+        <Link href="#contact" onClick={handleScroll}>
           <motion.button
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -53,7 +62,7 @@ export default function Hero() {
             Hire Me
           </motion.button>
         </Link>
-        <Link href="#projects">
+        <Link href="#projects" onClick={handleScroll}>
           <motion.button
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
